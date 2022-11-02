@@ -7,7 +7,6 @@ import { Component, Input } from '@angular/core'
     <button aria-label="decrement" (click)="decrement()">-</button>
     <span data-cy="counter">{{ count }}</span>
     <button aria-label="increment" (click)="increment()">+</button>
-    <img src="https://placekitten.com/200/200"/>
   </div>`,
 })
 export class StepperComponent {
@@ -16,14 +15,8 @@ export class StepperComponent {
   constructor(private http: HttpClient) {
   }
 
-
-
   decrement(): void {
     this.count--
-
-    this.http.get(`https://placekitten.com/300/300`).subscribe((result) => {
-      console.log('success')
-    })
   }
 
   increment(): void {
